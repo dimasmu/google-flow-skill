@@ -1,0 +1,46 @@
+{
+  "name": "Senja",
+  "tag": "@Senja",
+  "source_image": "reference_photo.jpg",
+  "target_style": "3D Pixar-quality animated character",
+  "age_and_gender": "young woman around 24 years old",
+  "face_and_skin": "soft heart-shaped face, warm light-tan skin tone, subtle freckles across nose bridge",
+  "eyes_and_brows": "large expressive dark brown almond eyes, neat natural arched eyebrows",
+  "hair": "shoulder-length wavy chestnut-black hair with wispy curtain bangs",
+  "wardrobe": "mustard-yellow oversized corduroy jacket over a striped navy-and-white crew-neck tee, dark blue rolled-up denim jeans, and white canvas high-top sneakers",
+  "accessories": "round tortoiseshell eyeglasses and a small silver crescent moon pendant necklace",
+  "body_proportions": "slender medium build, 165cm height, relaxed posture",
+  "immutable_traits": [
+    "round tortoiseshell eyeglasses",
+    "shoulder-length wavy chestnut-black hair with curtain bangs",
+    "mustard-yellow oversized corduroy jacket"
+  ],
+  "voice_profile": {
+    "base_type": "Warm Young Female Alto",
+    "custom_voice_prompt": "Warm and clear alto voice, conversational medium-fast pace, expressive and curious tone with a gentle smile in the voice."
+  },
+  "character_info_agent": "Senja is an inquisitive indie illustrator and urban sketcher. She is observant, warm-hearted, and slightly clumsy when excited. Mannerisms: frequently pushes her round tortoiseshell glasses up her nose and tilts her head slightly when listening. Speaks in vivid, enthusiastic sentences.",
+  "sample_scenes": [
+    {
+      "title": "Scene 1 - Studio Intro (Close-Up & Lip-Sync)",
+      "camera": "Medium close-up shot at eye level, 85mm lens, shallow depth of field",
+      "setting": "cozy sunlit art studio filled with sketchbooks and indoor plants, warm morning window light",
+      "action": "adjusts her round tortoiseshell glasses gently, looks directly into the camera, and smiles warmly",
+      "dialogue": "Halo semuanya! Hari ini kita bakal keliling kota buat cari inspirasi sketsa baru."
+    },
+    {
+      "title": "Scene 2 - Street Exploration (Full-Body Shot)",
+      "camera": "Full-body wide shot, 35mm cinematic lens",
+      "setting": "charming old-town cobblestone street lined with vintage cafes in golden hour light",
+      "action": "stands near a wooden cafe signboard holding a leather sketchbook and pencil, looking around curiously",
+      "dialogue": ""
+    },
+    {
+      "title": "Scene 3 - Walking Sequence (Tracking Motion Shot)",
+      "camera": "Smooth medium front-tracking gimbal shot",
+      "setting": "tree-lined park pathway with dappled afternoon sunlight",
+      "action": "walks forward at a relaxed pace with her sketchbook tucked under her left arm, hair swaying naturally",
+      "dialogue": ""
+    }
+  ]
+}

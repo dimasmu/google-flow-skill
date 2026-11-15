@@ -99,3 +99,32 @@ Static smartphone camera. @nadia smiles warmly and naturally at the camera, spea
 * Potong jeda hening (0.2–0.4 detik) di awal/akhir setiap klip Veo agar ritme bicara terasa cepat dan alami.
 * Samakan *warmth/contrast* antara klip AI dan B-Roll asli agar transisi tidak jomplang.
 * Tambahkan *auto-caption* dan musik *lo-fi* pelan (volume 5–8%).
+
+---
+
+## 5. Rekomendasi Website Background Gratis (Foto & Video)
+
+Gunakan foto/video ruangan asli dari website berikut agar *background* di Google Flow terlihat seperti rumah sungguhan:
+
+1. **Pexels** (https://www.pexels.com) — Paling lengkap untuk **foto & video vertikal (`9:16`)** gratis tanpa watermark. Kata kunci: *"minimalist living room"*, *"vanity mirror table"*, *"modern bathroom"*.
+2. **Unsplash** (https://www.unsplash.com) — Foto interior resolusi tinggi dengan pencahayaan alami yang tajam.
+3. **Pixabay** (https://www.pixabay.com) — Gratis foto & video bebas royalti.
+4. **Mixkit** (https://mixkit.co) — Video *stock* B-roll gratis (HD/4K) tanpa perlu daftar akun.
+5. **Pinterest** (https://www.pinterest.com) — Cocok untuk mencari referensi suasana ruangan ala Indonesia/Asia (ketik: *"kamar tidur minimalis estetik"* atau *"meja rias minimalis"*).
+
+**Kriteria Background yang Bagus**:
+* Orientasi **Vertikal (`Portrait / 9:16`)**.
+* **Ruangan kosong (tanpa orang)** agar AI tidak bingung menimpa wajah karakter.
+* Sudut pandang **sejajar mata (*eye-level*)** dengan ruang kosong di depan untuk posisi karakter.
+* Jika sumbernya video, *pause* di *frame* paling bersih lalu *screenshot* sebelum di-upload ke Google Flow.
+
+---
+
+## 6. Perbedaan **Mode Agen** vs **Mode Biasa** di Google Flow
+
+| Aspek | **Mode Biasa** (`Image` / `Video`) | **Mode Agen** (`Agen` / Flow Agent) |
+| :--- | :--- | :--- |
+| **Cara Kerja** | Eksekusi langsung 1 prompt jadi 1 gambar atau 1 klip video. | Asisten AI interaktif (seperti chat) yang bisa *brainstorming* skrip, merancang *storyboard* multi-adegan, dan men-generate beberapa aset sekaligus. |
+| **Kontrol** | **Presisi tinggi** (kita atur sendiri frame, lensa, pose, dan botol produknya). | **Otomatis / Diarahkan AI** (lebih cepat untuk ide awal, tapi detail kecil seperti posisi botol lebih sulit dikontrol persis). |
+| **Kapan Dipakai?** | Saat **eksekusi produksi affiliate** yang butuh konsistensi wajah & label produk yang ketat (seperti workflow *Still-First* di atas). | Saat **awal proyek** ketika masih bingung mau bikin cerita/skrip apa, atau butuh dibuatkan *storyboard* dan banyak variasi adegan secara cepat. |
+

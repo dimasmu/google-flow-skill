@@ -8,6 +8,7 @@ Repository ini berisi paket lengkap **AI Agent Skill (`SKILL.md`)**, **End-to-En
 
 - **[SKILL.md](SKILL.md)** — Instruksi utama skill `google-flow-character` untuk AI Agent (juga tersedia di [.agents/skills/google-flow-character/SKILL.md](.agents/skills/google-flow-character/SKILL.md)).
 - **[workflows/create-character-from-image.md](workflows/create-character-from-image.md)** — Workflow lengkap langkah demi langkah dari 1 gambar referensi hingga produksi video multi-scene di Google Flow (juga disinkronkan ke [.agents/workflows/create-character-from-image.md](.agents/workflows/create-character-from-image.md)).
+- **[workflows/brand-promo-storyboard.md](workflows/brand-promo-storyboard.md)** — Workflow **Still-First, Video-Second** untuk menggabungkan `@Karakter` + Produk Brand + Environment menjadi 4-shot storyboard iklan di Google Flow & Veo (juga di [.agents/workflows/brand-promo-storyboard.md](.agents/workflows/brand-promo-storyboard.md)).
 - **[references/style-transformations.md](references/style-transformations.md)** — Library prompt *Identity Preservation Lock* untuk mengubah foto referensi menjadi:
   - *3D Pixar / Disney Animation* (+ *Pixar Mirror validation prompt*)
   - *Cinematic Photorealism (Studio Master Portrait)*

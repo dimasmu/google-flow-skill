@@ -87,7 +87,8 @@ Setiap kali skill ini dijalankan untuk sebuah gambar, sajikan hasil dalam format
 
 ## File Referensi & Alat Bantu di Skill Ini
 - [workflows/create-character-from-image.md](workflows/create-character-from-image.md) — Dokumen workflow lengkap dari gambar referensi hingga video akhir di Google Flow.
+- [workflows/brand-promo-storyboard.md](workflows/brand-promo-storyboard.md) — Workflow **Still-First, Video-Second** untuk menggabungkan `@Karakter` + Produk Brand + Environment dalam storyboard iklan.
 - [references/style-transformations.md](references/style-transformations.md) — Kumpulan prompt pengunci identitas (*Identity Lock*) untuk berbagai gaya visual.
-- [references/google-flow-setup-guide.md](references/google-flow-setup-guide.md) — Panduan teknis fitur `Characters`, `@Tags`, `Ingredients`, `Whisk`, dan `Flow Agent`.
+- [references/google-flow-setup-guide.md](references/google-flow-setup-guide.md) — Panduan teknis fitur `Characters` (`Potret`, `Buat badan`, `Info karakter`, `Voice`), `@Tags`, `Ingredients`, `Whisk`, dan `Flow Agent`.
 - [templates/character-spec-template.md](templates/character-spec-template.md) — Template lembar kerja spesifikasi karakter (*Character Bible*).
 - [scripts/generate_character_pack.py](scripts/generate_character_pack.py) — Script Python CLI untuk men-generate dokumen *Character Pack* dan prompt Google Flow otomatis dari file JSON spesifikasi karakter.

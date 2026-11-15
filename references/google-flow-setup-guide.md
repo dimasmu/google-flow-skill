@@ -16,31 +16,34 @@ Di Google Flow, sebuah **Character** bukan sekadar satu gambar referensi, melain
 
 ## 2. Cara Setup Karakter di Tab `Characters`
 
-### A. Membuat `Visual Base`
+### A. Membuat `Visual Base` (Tab `Potret`)
 Buka menu sebelah kiri -> klik **`Characters`** -> klik **`New Character`**.
 Ada 3 cara membangun tampilan dasar:
-- **Upload / Approved Image**: Unggah gambar referensi (atau hasil transformasi gaya dari Tahap 2) yang sudah memiliki pencahayaan netral dan wajah tajam.
+- **Upload / Approved Image**: Unggah gambar referensi (atau hasil transformasi gaya) yang sudah memiliki pencahayaan netral dan wajah tajam.
 - **From Scratch (Nano Banana Pro / Nano Banana 2)**: Generate langsung di dalam Flow menggunakan *Locked Identity Block Prompt*.
-- **Templates**: Memilih template preset (*"the fantastical"*, dll.) lalu memodifikasi prompt-nya.
+- **Templates**: Memilih template preset lalu memodifikasi prompt-nya.
 
-### B. Menambahkan `Extra Views` (Wajib untuk Konsistensi Full-Body)
-Setelah gambar awal dikunci:
-1. Klik opsi untuk men-generate gambar referensi kedua (*Add Extra Views*).
-2. Saat Flow meminta deskripsi tubuh dan pakaian (*body and outfit description*), gunakan format spesifik berikut:
-   > `[Tinggi/Postur Tubuh] + [Atasan: jenis, warna spesifik, kerah/detail] + [Bawahan: jenis, warna, potongan] + [Sepatu/Alas Kaki] + [Aksesori yang menempel di badan]`
-3. Ini memberi model AI pemahaman 360 derajat sehingga ketika kamera mengambil *wide shot* atau *back shot*, pakaian dan proporsi tubuh karakter tidak berubah-ubah.
+> **Tips Pembersih Screenshot Video & Edit Cepat:**
+> Jika foto awal berasal dari *screenshot* video (agak buram atau ada *subtitle*), masukkan ke tab **`Potret`** lalu minta hapus *subtitle* & *blur*. Jika hasil *Potret* sudah bagus tapi butuh penyesuaian kecil (misal *blush* terlalu merah atau warna kulit kurang natural), gunakan kotak edit **`"Apa yang ingin Anda ubah?"`** di bawah gambar tanpa perlu mengulang dari nol.
+
+### B. Menambahkan `Buat badan` / `Extra Views` (Wajib untuk Konsistensi Full-Body)
+Di bawah gambar `Potret`, klik tombol **`Buat badan`** (`Extra Views`):
+1. Jika hanya butuh adegan menghadap kamera (*talking head*), 1 gambar badan tampak depan sudah cukup.
+2. **Rekomendasi Terbaik (`3-Panel 16:9 Turnaround Sheet`)**: Atur format ke **`16:9` (Landscape)** untuk men-generate 1 gambar berisi **3 sudut sekaligus** (*3/4 front*, *90° side profile*, dan *back view*) di latar abu-abu studio netral (`#D8D8D8`) dari kepala hingga sepatu (*head-to-toe*). Ini mencegah AI mengarang potongan rambut belakang atau alas kaki saat kamera bergerak.
+3. Masukkan deskripsi tubuh & pakaian lengkap dengan format:
+   > `[Postur & siluet tubuh] + [Atasan: jenis, warna spesifik, detail tali/kerah] + [Bawahan: jenis, warna, potongan] + [Sepatu/Alas Kaki]`
 
 ### C. Mengatur `Voice Profile` (Suara & Lip-Sync)
-1. **Preset Voices**: Audisi daftar suara bawaan dan tempelkan ke karakter.
+1. **Preset Voices**: Audisi suara bawaan (misalnya preset seperti **`autonoe`** untuk karakter wanita bernada lembut) dan tempelkan ke karakter.
 2. **Custom Voices**:
    - Pilih satu *base voice*.
    - Beri nama suara tersebut.
    - Tulis deskripsi karakter vokal (*voice prompt*) yang mencakup **Pitch/Register**, **Pace (Tempo)**, **Texture (Tekstur suara)**, dan **Emotion/Vibe**:
-     - *Contoh Karakter Pria Tenang*: `"Warm mid-baritone voice, measured and relaxed pace, clean studio vocal texture with a reassuring, thoughtful tone."`
-     - *Contoh Karakter Wanita Enerjik*: `"Bright alto voice, fast-paced and expressive delivery, slightly raspy edge when excited, warm and approachable."`
+     - *Contoh Wanita Kalem & Lembut*: `"Soft, calm, and gentle young female alto voice. Smooth, airy, and warm vocal texture with a relaxed, unhurried conversational pace, soothing intonation."`
+     - *Contoh Pria Tenang*: `"Warm mid-baritone voice, measured and relaxed pace, clean studio vocal texture with a reassuring, thoughtful tone."`
 
-### D. Mengisi `Character Info` (Untuk Google Flow Agent)
-Kolom **Character info** sangat krusial jika kamu menggunakan **Google Flow Agent** untuk *brainstorming* skrip atau menyusun banyak *clip*:
+### D. Mengisi `Info karakter (opsional)` (Untuk Google Flow Agent)
+Kolom **Info karakter** sangat krusial jika kamu menggunakan **Google Flow Agent** untuk *brainstorming* skrip atau menyusun banyak *clip*:
 - Tuliskan dalam 3-4 kalimat:
   1. **Peran & Kepribadian Utama**: (misal: *"Detektif swasta yang skeptis namun berempati tinggi."*)
   2. **Bahasa Tubuh / Mannerisms**: (misal: *"Sering membetulkan letak kacamatanya saat berpikir dan jarang tersenyum lebar."*)

@@ -8,16 +8,16 @@ Repository ini berisi kumpulan **4 AI Agent Skills & Universal Chatbot System Pr
 
 Selain memasang skill ke AI chatbot, kamu sekarang bisa langsung membuka file [`index.html`](index.html) di browser mana saja (atau mengaktifkan **GitHub Pages** dari repository ini) untuk men-generate paket prompt secara visual tanpa server tambahan:
 
-- **4 Paket Prompt Inti & Anti-Drift**:
-  - **Locked Identity Block** (*Anti-Drift Prefix*) + **Master Character Prompt** (*No-AI-Look Organic Realism Lock* & metadata kamera nyata).
-  - **Close-Up Portrait Prompt** (*Tab Potret*), **Full Body Prompt** (*Tab Buat Badan*), dan **Character Sheet / Turnaround Prompt** (opsi *3-Panel `16:9`* maupun *5 Views + 3 Expressions Grid*).
+- **Pipeline Bertahap & Paket Prompt Anti-Drift (7 Paket Inti)**:
+  - **Locked Identity Block** (*Anti-Drift Prefix*) + **Tahap 1: Master Visual Profile Board (Bento Card `9:16`)** + **Master Character Prompt** (*No-AI-Look Organic Realism Lock* & metadata kamera nyata).
+  - **Tahap 2: Clean Close-Up Portrait** (ekstraksi foto wajah bersih dari Gambar 1 ke *Tab Potret*), **Tahap 3A: Full Body Prompt** (*Tab Buat Badan*), dan **Tahap 3B: Character Sheet / Turnaround Prompt** (opsi *3-Panel `16:9`* maupun *5 Full-Body Views + 3 Expressions Grid*).
 - **Studio Terintegrasi 5 Tab**:
-  1. **Core Character Prompts** (Ringkasan, Locked Block, Master, Close-Up, Full Body, Character Sheet).
+  1. **Core Character Pipeline** (Ringkasan, Locked Block, Tahap 1 Profile Board Bento, Master Prompt, Tahap 2 Close-Up, Tahap 3A Full Body, Tahap 3B Character Sheet).
   2. **Google Flow Setup & Negative Prompt** (`Info Karakter`, *Custom Voice* untuk *lip-sync* Veo, Profil MBTI/Kepribadian, & *Anti-AI Negative Constraints*).
   3. **Character Matching** (Mode Single `@Tag`, Dual-Reference *Whisk / Ingredients*, & *Veo Motion*).
   4. **Outfit Swap Builder** (Mode *In-Place Edit*, Transfer Foto Baju, & Turnaround `16:9` Look Baru).
   5. **Storyboard Promosi Brand (Veo)** (4-shot *Hook $\rightarrow$ Product Reveal $\rightarrow$ Lifestyle $\rightarrow$ CTA*).
-- **Fitur Produktivitas**: 4 *Template Cepat 1-Klik* (`Nadia`, `Aria`, `Raka`, `Senja`), *Live Character Card Preview*, tombol *Copy* per kartu, *Copy All*, *Download `.txt`*, dan *Import / Export `.json`* yang kompatibel dengan [`scripts/generate_character_pack.py`](scripts/generate_character_pack.py).
+- **Fitur Produktivitas**: 5 *Template Cepat 1-Klik* (`Nadia`, `Liora`, `Aria`, `Raka`, `Senja`), *Live Character Card Preview*, tombol *Copy* per kartu, *Copy All*, *Download `.txt`*, dan *Import / Export `.json`* yang kompatibel dengan [`scripts/generate_character_pack.py`](scripts/generate_character_pack.py).
 
 ---
 

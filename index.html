@@ -538,6 +538,7 @@
     </div>
     <div class="preset-buttons">
       <button type="button" class="preset-btn" data-preset="nadia">Nadia — Natural Lifestyle (Google Flow)</button>
+      <button type="button" class="preset-btn" data-preset="liora">Liora — Gal Fashion (Bento Pipeline)</button>
       <button type="button" class="preset-btn" data-preset="aria">Aria — Old Money Editorial</button>
       <button type="button" class="preset-btn" data-preset="raka">Raka — Urban Tech &amp; Coffee</button>
       <button type="button" class="preset-btn" data-preset="senja">Senja — 3D Pixar Storyteller</button>
@@ -811,7 +812,7 @@
   </div>
 
   <div class="result-tabs" role="tablist">
-    <button type="button" class="tab-btn active" data-tab="core">1. Core Character Prompts (6 Paket)</button>
+    <button type="button" class="tab-btn active" data-tab="core">1. Core Character Pipeline (7 Paket)</button>
     <button type="button" class="tab-btn" data-tab="flow">2. Google Flow Setup &amp; Negative</button>
     <button type="button" class="tab-btn" data-tab="matching">3. Character Matching (Tiru Pose/Scene)</button>
     <button type="button" class="tab-btn" data-tab="outfit">4. Outfit Swap Generator</button>
@@ -853,7 +854,27 @@
       </div>
       <div class="output-body">
         <pre id="lockedBlockText"></pre>
-        <div class="output-tip">Gunakan blok teks ini setiap kali memanggil karakter di Google Flow (`@Tag`) atau generator gambar lain.</div>
+        <div class="output-tip">Gunakan blok teks ini setiap kali memanggil karakter di Google Flow (<code>@Tag</code>) atau generator gambar lain.</div>
+      </div>
+    </div>
+
+    <div class="output-card" data-key="profileboard">
+      <div class="output-header">
+        <div class="output-header-left">
+          <div class="output-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 10h18M12 3v18"/></svg></div>
+          <div>
+            <div class="output-title">Tahap 1: Master Visual Profile Board (Bento Card) <span class="badge-tag">Step 1 · Tanpa Lampiran (9:16)</span></div>
+            <div class="output-subtitle">Membuat papan profil visual lengkap (portrait + spec teks + ekspresi + variasi outfit + full body)</div>
+          </div>
+        </div>
+        <div class="output-header-right">
+          <button type="button" class="copy-btn" data-copy="profileboard">Copy</button>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="output-body">
+        <pre id="profileBoardText"></pre>
+        <div class="output-tip"><strong>Cara pakai Step 1:</strong> Paste di Google Flow (model <strong>Nano Banana Pro / Nano Banana 2</strong>, rasio <strong>9:16</strong> atau <strong>2:3</strong>) <strong>tanpa lampiran foto</strong>. Papan ini menjadi referensi induk (Gambar 1) untuk men-generate Close-Up di Tahap 2. <em>Jangan langsung pasang papan ini ke slot <code>Potret</code> karena berisi banyak wajah &amp; teks.</em></div>
       </div>
     </div>
 
@@ -862,8 +883,8 @@
         <div class="output-header-left">
           <div class="output-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
           <div>
-            <div class="output-title">Master Character Prompt <span class="badge-tag">No-AI-Look</span></div>
-            <div class="output-subtitle">Prompt induk lengkap dengan detail tekstur kulit, kamera, dan konsistensi</div>
+            <div class="output-title">Master Character Prompt <span class="badge-tag">Alternatif Foto Tunggal No-AI-Look</span></div>
+            <div class="output-subtitle">Prompt induk jika ingin langsung menghasilkan 1 potret tunggal tanpa papan kolase Bento</div>
           </div>
         </div>
         <div class="output-header-right">
@@ -879,8 +900,8 @@
         <div class="output-header-left">
           <div class="output-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/></svg></div>
           <div>
-            <div class="output-title">Close-Up Portrait Prompt <span class="badge-tag">Google Flow: Tab Potret</span></div>
-            <div class="output-subtitle">Potret wajah &amp; bahu super tajam untuk mengunci struktur wajah utama</div>
+            <div class="output-title">Tahap 2: Clean Close-Up Portrait (Dari Gambar 1) <span class="badge-tag">Step 2 · Lampirkan Gambar 1 &rarr; Tab Potret</span></div>
+            <div class="output-subtitle">Mengekstrak 1 foto close-up wajah bersih tanpa teks/kolase untuk dipasang ke Google Flow Tab Potret</div>
           </div>
         </div>
         <div class="output-header-right">
@@ -888,7 +909,10 @@
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </div>
-      <div class="output-body"><pre id="closeupPromptText"></pre></div>
+      <div class="output-body">
+        <pre id="closeupPromptText"></pre>
+        <div class="output-tip"><strong>Cara pakai Step 2:</strong> Lampirkan <strong>Gambar 1 (Profile Board)</strong> di Google Flow, pilih rasio <strong>3:4</strong> atau <strong>1:1</strong>, jalankan prompt ini. Simpan hasilnya ke menu <strong>Characters &rarr; Tab Potret</strong> sebagai wajah utama (<code>@Tag</code>).</div>
+      </div>
     </div>
 
     <div class="output-card" data-key="fullbody">
@@ -896,8 +920,8 @@
         <div class="output-header-left">
           <div class="output-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 8v6M9 22l2-8h2l2 8M8 12l-2 3M16 12l2 3"/></svg></div>
           <div>
-            <div class="output-title">Full Body Prompt <span class="badge-tag">Google Flow: Buat Badan</span></div>
-            <div class="output-subtitle">Seluruh tubuh dari kepala sampai sepatu tanpa terpotong</div>
+            <div class="output-title">Tahap 3A: Full Body Portrait (Dari Foto Close-Up) <span class="badge-tag">Step 3A · Lampirkan Close-Up &rarr; Buat Badan</span></div>
+            <div class="output-subtitle">Membuat pose seluruh tubuh dari kepala sampai sepatu dengan mengunci wajah dari Tahap 2</div>
           </div>
         </div>
         <div class="output-header-right">
@@ -905,7 +929,10 @@
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </div>
-      <div class="output-body"><pre id="fullbodyPromptText"></pre></div>
+      <div class="output-body">
+        <pre id="fullbodyPromptText"></pre>
+        <div class="output-tip"><strong>Cara pakai Step 3A:</strong> Lampirkan <strong>Foto Close-Up bersih (Tahap 2)</strong> atau panggil <code>@Tag</code> di rasio <strong>3:4</strong> / <strong>9:16</strong>.</div>
+      </div>
     </div>
 
     <div class="output-card" data-key="charsheet">
@@ -913,8 +940,8 @@
         <div class="output-header-left">
           <div class="output-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="4" height="16" rx="1"/><rect x="10" y="4" width="4" height="16" rx="1"/><rect x="17" y="4" width="4" height="16" rx="1"/></svg></div>
           <div>
-            <div class="output-title">Character Sheet / Turnaround Prompt <span class="badge-tag">Ingredients Reference</span></div>
-            <div class="output-subtitle">Multi-angle turnaround untuk mengunci konsistensi wajah &amp; pakaian dari semua sisi</div>
+            <div class="output-title">Tahap 3B: Character Sheet / Turnaround <span class="badge-tag">Step 3B · Lampirkan Close-Up &rarr; 16:9 / Sheet</span></div>
+            <div class="output-subtitle">Multi-angle turnaround (5 Views + 3 Expressions atau 3-Panel 16:9) dari foto Close-Up &amp; Full Body</div>
           </div>
         </div>
         <div class="output-header-right">
@@ -924,7 +951,7 @@
       </div>
       <div class="output-body">
         <pre id="charsheetPromptText"></pre>
-        <div class="output-tip">Di Google Flow, pilih Aspect Ratio <strong>16:9 (Landscape)</strong> agar seluruh panel sudut pandang tercetak rapi dalam satu gambar.</div>
+        <div class="output-tip"><strong>Cara pakai Step 3B:</strong> Di Google Flow, lampirkan <strong>Close-Up (Tahap 2)</strong> (dan boleh tambah Full Body Tahap 3A di <em>Ingredients</em>), pilih Aspect Ratio <strong>16:9 (Landscape)</strong> agar seluruh panel sudut pandang tercetak rapi dalam satu gambar.</div>
       </div>
     </div>
   </div>
@@ -1228,23 +1255,23 @@
   };
 
   var OPTIONS = {
-    personality: ['Kalem','Lembut','Friendly','Percaya Diri','Elegan','Luxury','Ceria','Playful','Profesional','Misterius','Trendy','Hangat'],
+    personality: ['Kalem','Lembut','Friendly','Percaya Diri','Elegan','Luxury','Ceria','Playful','Modern','Profesional','Misterius','Trendy','Hangat'],
     niche: ['Lifestyle','Beauty & Skincare','Fashion','Travel','Food & Beverage','Teknologi','Fitness','Edukasi','Luxury','Lainnya'],
-    fashionStyle: ['Casual Minimalist','Old Money','Korean Chic','Streetwear','Luxury Editorial','Resort & Tropical Casual','Athleisure','Smart Business Casual','Lainnya'],
+    fashionStyle: ['Casual Minimalist','Old Money','Korean Chic','Gal Fashion','Streetwear','Luxury Editorial','Resort & Tropical Casual','Athleisure','Smart Business Casual','Lainnya'],
     visualStyle: ['Hyper Realistic (No-AI-Look)','Editorial Fashion Photography','Natural Lifestyle Candid','Commercial Brand Photography','3D Pixar Animated Character','Modern Anime (Makoto Shinkai Style)','Stylized 3D Painterly (Arcane Style)'],
     contentTypes: ['Brand Promo / Iklan','UGC Review Produk','OOTD','Daily Vlog','Traveling','Lifestyle','Selfie','Podcast','Affiliate'],
     platforms: ['Instagram','TikTok','YouTube Shorts','Google Flow / Veo','Facebook'],
     goals: ['Brand Ambassador & Promo','AI Influencer / Virtual Talent','UGC Content Creator','Fashion & Editorial Model','Storytelling / Micro-Drama','Personal Branding','Lainnya'],
-    professions: ['Lifestyle & Brand Content Creator','Beauty & Fashion Creator','Virtual Brand Ambassador','Travel & Cafe Storyteller','Editorial Fashion Model','Tech & Product Reviewer'],
-    hairColor: ['Natural Black','Jet Black','Dark Brown','Chestnut Brown','Light Brown','Auburn','Blonde','Ash Grey','Lainnya'],
-    hairStyle: ['Shoulder-Length Layered with Center Part','Long Soft Waves','Long Sleek Straight','Short Textured Bob','Wispy Bangs Shoulder-Length','High Ponytail','Messy Low Bun','Short Neat Tapered (Male)','Textured Medium Fringe (Male)','Lainnya'],
-    eyeColor: ['Dark Hazel Brown','Dark Brown','Warm Brown','Black','Amber','Hazel','Grey','Blue','Green','Lainnya'],
+    professions: ['Lifestyle & Brand Content Creator','Lifestyle Creator','Beauty & Fashion Creator','Virtual Brand Ambassador','Travel & Cafe Storyteller','Editorial Fashion Model','Tech & Product Reviewer'],
+    hairColor: ['Natural Black','Jet Black','Black-Pink Highlights','Dark Brown','Chestnut Brown','Light Brown','Auburn','Blonde','Ash Grey','Lainnya'],
+    hairStyle: ['Shoulder-Length Layered with Center Part','Butterfly Haircut (Layered with Wispy Bangs)','Long Soft Waves','Long Sleek Straight','Short Textured Bob','Wispy Bangs Shoulder-Length','High Ponytail','Messy Low Bun','Short Neat Tapered (Male)','Textured Medium Fringe (Male)','Lainnya'],
+    eyeColor: ['Dark Hazel Brown','Dark Brown','Warm Brown','Black','Cyan','Amber','Hazel','Grey','Blue','Green','Lainnya'],
     skinColor: ['Fair Warm Ivory','Light Warm','Light Olive','Natural Warm Tan (Sawo Matang)','Medium Tan','Olive','Brown','Deep Brown','Lainnya'],
     faceShape: ['Soft Oval-Heart','Oval','Round','Square','Heart','Diamond','Long','Lainnya'],
     makeup: ['Natural Healthy Skin Glow','Soft Everyday Makeup & Terracotta-Nude Lips','Subtle Peach Blush & Soft Lips','Igari Rosy Blush & Terracotta Lips','Bare-Faced No-Makeup Natural','Editorial Satin Glam','Clean Matte Groomed (Male)','Lainnya'],
     height: ['155–160 cm','160–165 cm','165–170 cm','170–175 cm','175–180 cm','180–185 cm','Lainnya'],
     bodyShape: ['Curvy Hourglass (Fuller Bust & Rounded Hips)','Slim Hourglass','Hourglass','Slim Proportional','Curvy','Athletic','Petite','Muscular Lean','Lainnya'],
-    accessories: ['Small Silver Hoop Earrings','Gold Hoop Earrings','Delicate Pendant Necklace','Round Eyeglasses','Sunglasses','Minimalist Wrist Watch','Rings','Tanpa Aksesoris'],
+    accessories: ['Small Silver Hoop Earrings','Silver Stud Earrings','Silver Bracelet','Gold Hoop Earrings','Delicate Pendant Necklace','Round Eyeglasses','Sunglasses','Minimalist Wrist Watch','Rings','Tanpa Aksesoris'],
     distinctiveFeatures: ['Subtle Natural Beauty Mark','Soft Cheekbone Dimples','Faint Nose-Bridge Freckles','Defined Collarbones','Expressive Almond Eyes','Soft Natural Lip Creases','Sharp Jawline','Naturally Arched Eyebrows']
   };
 
@@ -1269,6 +1296,28 @@
       contentTypes: ['Brand Promo / Iklan','UGC Review Produk','Lifestyle','Daily Vlog'],
       platforms: ['Instagram','TikTok','Google Flow / Veo'],
       goalSelect: 'Brand Ambassador & Promo'
+    },
+    liora: {
+      charName: 'Liora', charTag: '@Liora', charAge: '19', gender: 'Perempuan',
+      charCountry: 'Indonesia', charEthnicity: 'Indonesian (Java-Bataknese)',
+      charProfession: 'Lifestyle Creator',
+      personality: ['Friendly','Percaya Diri','Modern','Ceria','Playful','Trendy'],
+      mbtiSelect: 'ESFP', voiceToneSelect: 'bright_friendly_female',
+      hairColorSelect: 'Black-Pink Highlights', hairStyleSelect: 'Butterfly Haircut (Layered with Wispy Bangs)',
+      eyeColorSelect: 'Cyan', skinColorSelect: 'Natural Warm Tan (Sawo Matang)',
+      faceShapeSelect: 'Oval', makeupSelect: 'Subtle Peach Blush & Soft Lips',
+      heightSelect: '169 cm', bodyShapeSelect: 'Curvy',
+      fashionStyleSelect: 'Gal Fashion', nicheSelect: 'Lifestyle',
+      outfitDetail: 'fitted black strapless tube crop top with subtle white minimalist graphic lettering, black pleated mini skirt with grommet leather belt, black leather shoulder handbag, white mid-calf crew socks, and black chunky platform loafers',
+      accessories: ['Silver Stud Earrings','Silver Bracelet'], distinctiveFeatures: ['Faint Nose-Bridge Freckles','Subtle Natural Beauty Mark'],
+      distinctiveOther: 'tiny beauty mark below the left lower lip corner',
+      immutableTraits: 'black-pink butterfly layered haircut, cyan eyes, faint nose-bridge freckles and tiny mole below left lip corner',
+      visualStyleSelect: 'Hyper Realistic (No-AI-Look)', cameraPresetSelect: 'iphone_raw',
+      studioBgSelect: 'white', sheetLayoutSelect: 'grid8', noAiLookToggle: true,
+      targetAudience: 'Pria & Wanita usia 15–25 tahun penggemar fashion Gal/Y2K, lifestyle aesthetic, dan short-form video.',
+      contentTypes: ['OOTD','Lifestyle','Brand Promo / Iklan','Selfie'],
+      platforms: ['Instagram','TikTok','Google Flow / Veo'],
+      goalSelect: 'AI Influencer / Virtual Talent'
     },
     aria: {
       charName: 'Aria', charTag: '@Aria', charAge: '26', gender: 'Perempuan',
@@ -1631,6 +1680,47 @@
     }).join('');
   }
 
+  function generateProfileBoardPrompt(data){
+    var cam = CAMERA_PRESETS[data.cameraPreset] || CAMERA_PRESETS.dslr_studio;
+    var locked = buildLockedIdentityBlock(data);
+    var p = pronouns(data.gender);
+    var isStylized = /Pixar|Anime|Arcane/i.test(data.visualStyle);
+    var wardrobe = getResolvedWardrobe(data);
+    var lines = [];
+
+    lines.push('STEP 1 — MASTER VISUAL PROFILE BOARD (BENTO CHARACTER BIBLE · 9:16 VERTICAL)');
+    lines.push('Gunakan tanpa lampiran foto di Google Flow (model Nano Banana Pro / Nano Banana 2, rasio 9:16 atau 2:3):');
+    lines.push('');
+    lines.push('Create a clean, structured, high-resolution vertical editorial Bento Character Bible sheet (9:16 portrait layout) featuring ONE consistent character across modular cards with thin dark borders and crisp readable typography:');
+    lines.push('');
+    lines.push('1. TOP-LEFT CARD (Hero Portrait): Candid chest-up portrait of ' + locked + ' Natural relaxed expression looking gently at camera, soft window daylight.');
+    lines.push('2. TOP-RIGHT PANEL (Dark Slate Info Card — Header "MASTER CHARACTER PROMPT"): Render neat aligned text specs:');
+    lines.push('   Name: ' + fb(data.name,'Character'));
+    lines.push('   Age: ' + fb(data.age,'22'));
+    lines.push('   Ethnicity: ' + fb(data.ethnicity, fb(data.country,'Indonesian')));
+    lines.push('   Occupation: ' + fb(data.profession,'Lifestyle Creator'));
+    lines.push('   Height: ' + fb(data.height,'165 cm'));
+    lines.push('   Body Type: ' + fb(data.bodyShape,'Curvy'));
+    lines.push('   Personality: ' + (data.personality.length ? data.personality.join(', ') : 'Friendly, Calm, Confident'));
+    lines.push('   Style Aesthetic: ' + fb(data.fashionStyle,'Minimalist Casual'));
+    lines.push('   Skin: ' + fb(data.skinColor,'Natural Warm') + (data.distinctiveFeatures ? ', ' + data.distinctiveFeatures : ''));
+    lines.push('   Hair: ' + fb(data.hairStyle,'Layered') + ', ' + fb(data.hairColor,'Black'));
+    lines.push('   Eyes: ' + fb(data.eyeColor,'Dark Brown'));
+    lines.push('   Face Shape: ' + fb(data.faceShape,'Oval'));
+    lines.push('   Accessories: ' + (data.accessories || 'Minimal natural look'));
+    lines.push('   Photography: ' + data.visualStyle + ' | Camera: ' + cam.label);
+    lines.push('   Audience: ' + fb(data.targetAudience,'Young adults 18–30') + ' | Platform: ' + (data.platforms.length ? data.platforms.join(', ') : 'Instagram, TikTok'));
+    lines.push('3. MIDDLE-LEFT CARD ("EXPRESSIONS & ANGLES"): 4x2 grid (8 headshots) showing warm smile, playful wink, gentle smirk, 3/4 look, left/right side profiles, and slight back-angle glance.');
+    lines.push('4. MIDDLE-RIGHT CARD (Full-Body Lifestyle Preview): Natural indoor candid full-body standing shot from head to shoes wearing ' + wardrobe + ', showing ' + p.possessive + ' true ' + fb(data.bodyShape,'proportional') + ' proportions.');
+    lines.push('5. LOWER-LEFT CARDS ("DETAILS" & "OUTFIT VARIATIONS"): 4 horizontal macro close-up crops (eyes & iris detail, skin micro-pores & markings, ear/hair detail, wrist/accessory) above a row of 5 coordinated ' + fb(data.fashionStyle,'casual') + ' outfit variations.');
+    lines.push('6. BOTTOM-RIGHT PANEL ("NOTES FOR CONSISTENCY"): Checklist reminding to maintain identical bone structure, eye color, hair parting, signature marks, natural skin texture, and zero AI plastic look.');
+    if(data.noAiLook && !isStylized){
+      lines.push('');
+      lines.push('Realism Rule: ' + getNoAiLookClause(data));
+    }
+    return lines.join('\n');
+  }
+
   function generateMasterPrompt(data){
     var cam = CAMERA_PRESETS[data.cameraPreset] || CAMERA_PRESETS.dslr_studio;
     var locked = buildLockedIdentityBlock(data);
@@ -1676,18 +1766,21 @@
     var isStylized = /Pixar|Anime|Arcane/i.test(data.visualStyle);
 
     var lines = [];
-    lines.push('CLOSE-UP PORTRAIT PROMPT (GOOGLE FLOW TAB: POTRET)');
+    lines.push('STEP 2 — CLEAN CLOSE-UP PORTRAIT (GOOGLE FLOW TAB: POTRET)');
+    lines.push('Jika menggunakan Gambar 1 (Profile Board), LAMPIRKAN Gambar 1 lalu jalankan prompt ini di rasio 3:4 atau 1:1:');
     lines.push('');
-    lines.push(locked);
+    lines.push('Strictly referencing ONLY the character shown in the attached Master Profile Board image (or following this exact spec if starting fresh), isolate and generate ONE standalone, clean chest-up close-up portrait photograph.');
     lines.push('');
-    lines.push('Framing & Pose: Chest-up close-up portrait, eye-level camera directly facing the subject, centered balanced composition, gentle relaxed expression with natural soft smile and eyes looking straight into the lens.');
-    lines.push('Background: ' + cap(bg) + '.');
+    lines.push('CRITICAL EXTRACTION RULE: Completely REMOVE all collage frames, dark borders, grid panels, typography, info cards, expression thumbnails, and multiple views. Render ONLY a single clean unobstructed photograph on ' + bg + '.');
+    lines.push('');
+    lines.push('Identity Lock: ' + locked);
+    lines.push('Framing & Pose: Chest-up portrait, head tilted very subtly and naturally, relaxed expression with soft confident gaze looking directly into the camera lens.');
     lines.push('Camera & Optics: ' + cam.camera);
     lines.push('Lighting: ' + cam.lighting);
     if(noAi && !isStylized){
       lines.push('Skin & Eye Detail: ' + noAi);
     }
-    lines.push('Strict Constraints: No sunglasses, no hat, no hands or hair strands covering the eyes or face contour, zero subtitle text, zero compression blur, natural true-to-life color.');
+    lines.push('Strict Constraints: No collage, no text labels, no sunglasses, no hat, no hands covering the face, zero blur, natural true-to-life color.');
     return lines.join('\n');
   }
 
@@ -1699,18 +1792,19 @@
     var isStylized = /Pixar|Anime|Arcane/i.test(data.visualStyle);
 
     var lines = [];
-    lines.push('FULL BODY PROMPT (GOOGLE FLOW TAB: BUAT BADAN)');
+    lines.push('STEP 3A — FULL BODY PORTRAIT (GOOGLE FLOW TAB: BUAT BADAN)');
+    lines.push('Lampirkan foto Close-Up bersih (hasil Tahap 2) atau panggil ' + data.tag + ', lalu jalankan di rasio 3:4 / 9:16:');
     lines.push('');
-    lines.push(data.tag + ' Full-body front-to-slight-3/4 view of ' + fb(data.name,'Character') + ', ' + fb(data.age,'22') + '-year-old ' + fb(data.ethnicity,'Indonesian') + ' ' + p.genderEn + ', ' + fb(data.height,'163 cm') + ', ' + fb(data.bodyShape,'curvy proportional') + ' silhouette, standing naturally with relaxed weight distribution and arms resting calmly.');
+    lines.push(data.tag + ' Using the attached clean close-up portrait strictly as the facial identity, skin tone, eye color, hair color/style, and signature facial details reference, generate ONE clean full-body front-standing studio photograph of ' + fb(data.name,'Character') + ', ' + fb(data.age,'22') + '-year-old ' + fb(data.ethnicity,'Indonesian') + ' ' + p.genderEn + ', ' + fb(data.height,'163 cm') + ', ' + fb(data.bodyShape,'curvy proportional') + ' silhouette.');
     lines.push('');
-    lines.push('Outfit & Silhouette Lock: Wearing ' + wardrobe + (data.accessories ? (', with ' + data.accessories) : '') + '. Keep the exact outfit fit, silhouette, and proportions clearly visible from head to toe.');
-    lines.push('Face & Hair Lock: Preserve the exact same face, ' + fb(data.makeup,'natural healthy skin glow') + ', and ' + fb(data.hairStyle,'shoulder-length layered') + ' ' + fb(data.hairColor,'black') + ' hair.');
-    lines.push('Background: ' + cap(bg) + '.');
+    lines.push('Outfit & Silhouette Lock: Wearing ' + wardrobe + (data.accessories ? (', with ' + data.accessories) : '') + '. Keep the outfit tailored cleanly to ' + p.possessive + ' true body proportions from head to toe.');
+    lines.push('Face & Hair Continuity: 100% identical face, ' + fb(data.eyeColor,'dark brown') + ' eyes, ' + fb(data.makeup,'natural healthy glow') + ', and ' + fb(data.hairStyle,'layered') + ' ' + fb(data.hairColor,'black') + ' hair matching the attached close-up portrait.');
+    lines.push('Background: ' + cap(bg) + ', zero collage borders or text.');
     lines.push('Camera & Lighting: ' + cam.camera + ' ' + cam.lighting);
     if(data.noAiLook && !isStylized){
-      lines.push('Realism: Natural human anatomy, realistic fabric drape and creases, authentic skin texture across arms and face.');
+      lines.push('Realism: Natural human anatomy, realistic fabric folds, natural skin texture on face, shoulders, arms, and legs.');
     }
-    lines.push('Framing Rule: Full head-to-toe framing with breathing room above the head and below the shoes — never crop the feet.');
+    lines.push('Framing Rule: Complete head-to-toe visibility with generous margin above the head and below the shoes — never crop the feet.');
     return lines.join('\n');
   }
 
@@ -1720,20 +1814,24 @@
     var lines = [];
 
     if(data.sheetLayout === 'grid8'){
-      lines.push('COMPLETE CHARACTER SHEET / TURNAROUND GRID PROMPT');
+      lines.push('STEP 3B — COMPLETE CHARACTER SHEET (5 FULL-BODY VIEWS + 3 EXPRESSIONS)');
+      lines.push('Lampirkan foto Close-Up Tahap 2 (dan boleh tambah Full Body Tahap 3A di Ingredients), lalu jalankan di rasio 16:9:');
       lines.push('');
-      lines.push(data.tag + ' Using the attached portrait as the strict character identity reference, generate a clean multi-panel orthographic character turnaround sheet on a solid neutral studio gray background (#D8D8D8).');
+      lines.push(data.tag + ' Using the attached clean close-up portrait (and full-body reference if attached) as strict character identity, hair, and outfit reference, create a clean orthographic character turnaround sheet on a uniform light neutral studio gray background (#E5E7EB), 16:9 widescreen layout, divided only by thin crisp white grid lines with ZERO text labels.');
       lines.push('');
-      lines.push('Top Row (5 Consistent Full-Body Views — head to toe): Front view, 45-degree 3/4 view, left 90-degree side profile, right 90-degree side profile, and full back view.');
-      lines.push('Bottom Row (3 Facial Expression Studies): Calm neutral gaze, warm soft smile, and thoughtful/serious expression.');
+      lines.push('Top Row (5 Equal Vertical Full-Body Panels — head to shoes, never cropped):');
+      lines.push('Panel 1: Front view facing camera | Panel 2: Slight 3/4 angled view | Panel 3: Left 90-degree side profile | Panel 4: Right 90-degree side profile | Panel 5: Full back view clearly showing rear hair and outfit.');
+      lines.push('Bottom Row (3 Large Chest-Up Expression Panels — visually distinct poses & moods):');
+      lines.push('Left: Calm relaxed neutral straight-on gaze | Center: Warm open genuine smile with soft eye crinkles | Right: Slight 3/4 thoughtful side-glance with subtle lips-together smirk.');
       lines.push('');
       lines.push('Character Spec: ' + locked);
-      lines.push('Outfit Consistency: Identical ' + wardrobe + ' across every single panel.');
-      lines.push('Lighting & Optics: Flat even 5600K studio lighting with zero dramatic shadows, crisp separation between views, zero cropped feet.');
+      lines.push('Outfit Consistency: Exact same ' + wardrobe + ' across all 5 full-body panels.');
+      lines.push('Lighting & Optics: Flat even 5600K studio lighting across every panel, zero shadows cast between panels, zero cropped feet, zero typography or captions.');
     } else {
-      lines.push('GOOGLE FLOW 3-PANEL 16:9 TURNAROUND SHEET PROMPT');
+      lines.push('STEP 3B — GOOGLE FLOW 3-PANEL 16:9 TURNAROUND SHEET');
+      lines.push('Lampirkan foto Close-Up Tahap 2 (dan boleh tambah Full Body Tahap 3A), lalu jalankan di rasio 16:9:');
       lines.push('');
-      lines.push(data.tag + ' Using the attached portrait as the strict character reference, create a clean 3-panel full-body character sheet side-by-side on a solid neutral studio gray background (#D8D8D8), 16:9 landscape aspect ratio.');
+      lines.push(data.tag + ' Using the attached clean close-up portrait as the strict character reference, create a clean 3-panel full-body character turnaround sheet side-by-side on a solid neutral studio gray background (#D8D8D8), 16:9 landscape aspect ratio, ZERO text.');
       lines.push('');
       lines.push('Panel 1 (Left): Full-body 3/4 front-angled view standing naturally.');
       lines.push('Panel 2 (Center): Full-body 90-degree side profile view.');
@@ -1898,6 +1996,7 @@
     return [
       summaryAsPlainText(data),
       'LOCKED IDENTITY BLOCK\n\n' + buildLockedIdentityBlock(data),
+      generateProfileBoardPrompt(data),
       generateMasterPrompt(data),
       generateCloseupPrompt(data),
       generateFullBodyPrompt(data),
@@ -1941,7 +2040,7 @@
     var stages = [
       {p:20, t:'Mengekstrak Visual DNA & 3 Immutable Traits...'},
       {p:48, t:'Menyuntikkan No-AI-Look Realism & Kamera...'},
-      {p:76, t:'Menulis Master, Close-Up, Full Body & Character Sheet...'},
+      {p:76, t:'Menyusun Pipeline Tahap 1 (Profile Board) \u2192 Tahap 2 (Close-Up) \u2192 Tahap 3 (Full Body/Sheet)...'},
       {p:100, t:'Paket prompt siap digunakan!'}
     ];
     section.classList.remove('hidden');
@@ -1976,6 +2075,7 @@
       window.__lastData = data;
       document.getElementById('summaryBody').innerHTML = generateSummaryHtml(data);
       document.getElementById('lockedBlockText').textContent = buildLockedIdentityBlock(data);
+      document.getElementById('profileBoardText').textContent = generateProfileBoardPrompt(data);
       document.getElementById('masterPromptText').textContent = generateMasterPrompt(data);
       document.getElementById('closeupPromptText').textContent = generateCloseupPrompt(data);
       document.getElementById('fullbodyPromptText').textContent = generateFullBodyPrompt(data);
@@ -2005,14 +2105,15 @@
   function setSelectValue(id, val){
     var el = document.getElementById(id);
     if(!el) return;
+    var otherInp = document.getElementById(id.replace('Select','Other'));
     var found = Array.prototype.some.call(el.options, function(o){ return o.value === val; });
     if(found){
       el.value = val;
+      if(otherInp) otherInp.value = '';
     } else if(val){
       var hasOther = Array.prototype.some.call(el.options, function(o){ return o.value === 'Lainnya'; });
       if(hasOther){
         el.value = 'Lainnya';
-        var otherInp = document.getElementById(id.replace('Select','Other'));
         if(otherInp) otherInp.value = val;
       }
     }
@@ -2048,7 +2149,9 @@
 
     document.getElementById('outfitDetail').value = p.outfitDetail || '';
     setCheckedValues('accessories', p.accessories);
+    document.getElementById('accessoriesOther').value = p.accessoriesOther || '';
     setCheckedValues('distinctive', p.distinctiveFeatures);
+    document.getElementById('distinctiveOther').value = p.distinctiveOther || '';
     document.getElementById('immutableTraits').value = p.immutableTraits || '';
 
     setSelectValue('visualStyleSelect', p.visualStyleSelect);
@@ -2137,6 +2240,7 @@
     var map = {
       summary: summaryAsPlainText(data),
       locked: document.getElementById('lockedBlockText').textContent,
+      profileboard: document.getElementById('profileBoardText').textContent,
       master: document.getElementById('masterPromptText').textContent,
       closeup: document.getElementById('closeupPromptText').textContent,
       fullbody: document.getElementById('fullbodyPromptText').textContent,

@@ -1,6 +1,23 @@
 # Google Flow & AI Character Suite (`google-flow-skill`)
 
-Repository ini berisi kumpulan **4 AI Agent Skills & Universal Chatbot System Prompts** serta **End-to-End Workflows** yang dirancang khusus untuk membuat, mencocokkan adegan/pose, mengganti pakaian, dan memproduksi video karakter AI yang **100% konsisten & hyper-realistic** di **Google Flow** (*Nano Banana Pro*, *Gemini Omni Flash*, *Veo*, *Ingredients*, *Whisk*), serta kompatibel penuh untuk dipasang di **ChatGPT (Custom GPT / Projects)**, **Gemini (Gems)**, **Google AI Studio (System Instructions)**, dan **Antigravity**.
+Repository ini berisi kumpulan **4 AI Agent Skills & Universal Chatbot System Prompts**, **Web UI Generator Interaktif (`index.html`)**, serta **End-to-End Workflows** yang dirancang khusus untuk membuat, mencocokkan adegan/pose, mengganti pakaian, dan memproduksi video karakter AI yang **100% konsisten & hyper-realistic** di **Google Flow** (*Nano Banana Pro*, *Gemini Omni Flash*, *Veo*, *Ingredients*, *Whisk*), serta kompatibel penuh untuk dipasang di **ChatGPT (Custom GPT / Projects)**, **Gemini (Gems)**, **Google AI Studio (System Instructions)**, dan **Antigravity**.
+
+---
+
+## Web UI: Character Prompt Studio ([`index.html`](index.html))
+
+Selain memasang skill ke AI chatbot, kamu sekarang bisa langsung membuka file [`index.html`](index.html) di browser mana saja (atau mengaktifkan **GitHub Pages** dari repository ini) untuk men-generate paket prompt secara visual tanpa server tambahan:
+
+- **4 Paket Prompt Inti & Anti-Drift**:
+  - **Locked Identity Block** (*Anti-Drift Prefix*) + **Master Character Prompt** (*No-AI-Look Organic Realism Lock* & metadata kamera nyata).
+  - **Close-Up Portrait Prompt** (*Tab Potret*), **Full Body Prompt** (*Tab Buat Badan*), dan **Character Sheet / Turnaround Prompt** (opsi *3-Panel `16:9`* maupun *5 Views + 3 Expressions Grid*).
+- **Studio Terintegrasi 5 Tab**:
+  1. **Core Character Prompts** (Ringkasan, Locked Block, Master, Close-Up, Full Body, Character Sheet).
+  2. **Google Flow Setup & Negative Prompt** (`Info Karakter`, *Custom Voice* untuk *lip-sync* Veo, Profil MBTI/Kepribadian, & *Anti-AI Negative Constraints*).
+  3. **Character Matching** (Mode Single `@Tag`, Dual-Reference *Whisk / Ingredients*, & *Veo Motion*).
+  4. **Outfit Swap Builder** (Mode *In-Place Edit*, Transfer Foto Baju, & Turnaround `16:9` Look Baru).
+  5. **Storyboard Promosi Brand (Veo)** (4-shot *Hook $\rightarrow$ Product Reveal $\rightarrow$ Lifestyle $\rightarrow$ CTA*).
+- **Fitur Produktivitas**: 4 *Template Cepat 1-Klik* (`Nadia`, `Aria`, `Raka`, `Senja`), *Live Character Card Preview*, tombol *Copy* per kartu, *Copy All*, *Download `.txt`*, dan *Import / Export `.json`* yang kompatibel dengan [`scripts/generate_character_pack.py`](scripts/generate_character_pack.py).
 
 ---
 
@@ -49,6 +66,8 @@ Ketiga skill generator di folder `skills/` ditulis dengan format **Universal Sys
 
 ## Struktur File Lainnya di Repository
 
+- **Web UI Builder**:
+  - [`index.html`](index.html) — Aplikasi web mandiri (*standalone HTML*) **Character Prompt Studio** untuk membuat seluruh prompt karakter, outfit swap, matching, dan storyboard brand langsung di browser (siap pakai lokal maupun via GitHub Pages).
 - **Workflows**:
   - [`workflows/create-character-from-image.md`](workflows/create-character-from-image.md) — Panduan end-to-end pembuatan karakter konsisten di Google Flow.
   - [`workflows/brand-promo-storyboard.md`](workflows/brand-promo-storyboard.md) — Workflow **Still-First, Video-Second** untuk menggabungkan `@Karakter` + Produk Brand + Environment dalam storyboard iklan 4-shot.
